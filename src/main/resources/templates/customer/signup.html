@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml" xmlns:>
+<head>
+    <title>pizzahut</title>
+    <link rel="stylesheet" type="text/css" href="/css/user_signup.css">
+</head>
+<body>
+
+<div class="container" >
+
+    <form action="" th:action="@{/do_customer_register}" method="post" th:object="${customer}" >
+        <div class="button-1">
+            <label >Name</label>
+            <input type="text" name="customer_name">
+        </div>
+        <div class="button-1">
+            <label>Email</label>
+            <input type="email" name="customer_email">
+        </div>
+        <div class="button-1">
+            <label>Password</label>
+            <input type="password" name="customer_password">
+        </div>
+
+        <button class="button-2">Submit</button>
+    </form>
+
+
+</div>
+
+</body>
+</html>

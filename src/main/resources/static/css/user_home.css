@@ -1,0 +1,63 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+
+.container{
+    width :25%;
+    padding :10px;
+
+}
+
+th,td{
+    border-bottom: 1px solid;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+    background-color: lightgray;
+}
+th{
+    height:40px;
+}
+tr{
+    height: 40px;
+}
+.button-1{
+    background-color: #4CAF50;
+    border:none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    border-radius: 8px;
+}
+.button-1:hover {background-color: #3e8e41}
+
+.button-1:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>user is selecting order</title>
+        <link rel="stylesheet" type="text/css" href="/css/order_select.css">
+    </head>
+    <body>
+
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="/select_item">Select Items</a></li>
+        <li><a href="/cart_items">Cart</a></li>
+    </ul>
+
+    <div class="container" >
+        <table th:object="${menu}">
+            <thead>
+            <tr>
+                <th>Menu Item</th>
+                <th>Price</th>
+                <th>Status</th>
+                <th>      </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each = "c : ${menu}">
+
+                <td th:text = "${c.menu_name}"></td>
+                <td th:text="${c.price}">21</td>
+                <td th:text="${c.menu_status}" ></td>
+                <td><a class="btn btn-success" th:href="@{'/cart_items/' + ${c.menu_id}}" role="button">ADD To Cart</a></td>
+
+            </tr>
+            </tbody>
+
+
+        </table>
+    </div>
+
+
+
+    </body>
+</html>

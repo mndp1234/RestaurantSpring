@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+   <head>
+       <title>
+           add item
+       </title>
+       <link rel="stylesheet" type="text/css" href="/css/menu_item.css">
+   </head>
+    <body>
+    <ul>
+        <li><a href="/user/home">Home</a></li>
+        <li><a href="/add_item">Add Item</a></li>
+        <li><a href="#contact">Pending Orders</a></li>
+    </ul>
+
+
+    <div class="container" >
+
+        <form action="" th:action="@{/do_add_menu}" method="post" th:object="${menu}" >
+            <div class="button-1">
+                <label >Menu name</label>
+                <input type="text" name="menu_name">
+            </div>
+            <div class="button-1">
+                <label>Price</label>
+                <input type="number" step="1" name="price">
+            </div>
+            <div class="button-1">
+                <label>Status</label>
+                <input type="number" step="1" name="menu_status">
+            </div>
+
+            <button class="button-2">Add</button>
+        </form>
+
+
+    </div>
+
+
+    </body>
+</html>

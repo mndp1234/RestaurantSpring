@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>all items</title>
+        <link rel="stylesheet" type="text/css" href="/css/user_home.css">
+    </head>
+    <body>
+
+    <ul>
+        <li><a href="/user/home">Home</a></li>
+        <li><a href="/add_item">Add Item</a></li>
+        <li><a href="#contact">Pending Orders</a></li>
+    </ul>
+
+    <body>
+    <div class="container" >
+        <table th:object="${menu}">
+            <thead>
+            <tr>
+                <th>Menu Item</th>
+                <th>Price</th>
+                <th>Status</th>
+                <th>      </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each = "c : ${menu}">
+
+                <td th:text = "${c.menu_name}"></td>
+                <td th:text="${c.price}">21</td>
+                <td th:text="${c.menu_status}" ></td>
+                <td><a class="btn btn-success" th:href="@{'/delete_item/' + ${c.menu_id}}" role="button">Delete</a></td>
+                
+            </tr>
+            </tbody>
+
+
+        </table>
+    </div>
+
+
+    </body>
+
+</html>
